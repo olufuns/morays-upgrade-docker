@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#21135b" name="theme-color"/>
+<meta content="Morays Cloud DevOps Upgrade: containerise an Apache website with Docker, store versioned images in Amazon ECR, and deploy to AWS ECS Fargate with Terraform and an Application Load Balancer." name="description"/>
+<title>Morays | Docker &amp; ECS Cloud DevOps Upgrade</title>
+<link href="/assets/style.css" rel="stylesheet"/>
+<script defer="" src="/assets/app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar" id="home">
+<nav aria-label="Main navigation" class="nav shell">
+<a aria-label="Morays home" class="brand" href="#home"><span aria-hidden="true" class="brand-cloud">☁</span><strong>Morays</strong><span aria-hidden="true" class="brand-divider"></span><span class="brand-sub">Cloud DevOps</span></a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
+<div class="nav-links" id="nav-links"><a class="nav-current" href="#home">⌂ Home</a><a href="#architecture">◇ Architecture</a><a href="#workflow">✣ Automation</a><a href="#about">◎ About</a></div>
+</nav>
+</header>
+<main id="main">
+<section aria-labelledby="hero-heading" class="hero">
+<div aria-hidden="true" class="hero-glow a"></div><div aria-hidden="true" class="hero-glow b"></div><div aria-hidden="true" class="hero-glow c"></div>
+<div class="shell hero-grid">
+<div class="hero-copy">
+<p class="eyebrow glass"><span class="live-dot"></span> DOCKER · AMAZON ECR · TERRAFORM · ECS FARGATE</p>
+<h1 id="hero-heading">Morays Cloud<br/><span>DevOps Upgrade</span></h1>
+<p class="hero-desc">Build a colourful Apache website with Docker, publish a versioned image to Amazon ECR, and deploy it to AWS ECS Fargate behind an Application Load Balancer using Terraform.</p>
+<div class="hero-actions"><a class="btn btn-light" href="#architecture">↗ View Architecture</a><button class="btn btn-outline" data-open-dialog="status-dialog" type="button">◉ Deployment Status</button></div>
+<p class="hero-proof"><span>✓</span> Versioned container images <span class="proof-separator">•</span> Repeatable AWS deployment</p>
+</div>
+<div aria-label="Illustration showing AWS cloud, container workloads, Docker, Amazon ECR and Amazon ECS" class="hero-illustration" role="img">
+<span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+<div class="cloud-shape"><span class="cloud-aws">aws</span><span class="cloud-smile"></span></div>
+<div class="server-stack"><div class="server-rack"><i></i><i></i><b></b></div><div class="server-rack"><i></i><i></i><b></b></div><div class="server-rack"><i></i><i></i><b></b></div></div>
+<div class="tech-badge docker"><span>🐳</span><small>Docker</small></div><div class="tech-badge ecr"><span>▣</span><small>Amazon ECR</small></div><div class="tech-badge ecs"><span>⬡</span><small>ECS Fargate</small></div>
+<span class="floor-shadow"></span><span class="ring-light"></span>
+</div>
+</div>
+<div aria-hidden="true" class="hero-bottom"></div>
+</section>
+<section aria-labelledby="components-heading" class="section intro shell" id="components">
+<p class="section-kicker">WHAT POWERS THIS PROJECT</p>
+<h2 id="components-heading">One website. Four essential DevOps building blocks.</h2>
+<p class="section-text">Explore the services that take this website from a local folder to a running AWS container.</p>
+<div class="feature-grid">
+<button class="feature-card card-blue" data-detail="infrastructure" type="button"><span class="feature-icon">⬡</span><h3>Infrastructure</h3><p>Terraform provisions a VPC, subnets across two Availability Zones, security groups, the Application Load Balancer and ECS resources.</p><span class="card-link">Explore infrastructure ↗</span></button>
+<button class="feature-card card-lilac" data-detail="automation" type="button"><span class="feature-icon">⚙</span><h3>Container automation</h3><p>Docker packages Apache and the website. Scripts build and tag the image, push it to ECR and deploy Terraform changes.</p><span class="card-link">Explore automation ↗</span></button>
+<button class="feature-card card-green" data-detail="security" type="button"><span class="feature-icon">♢</span><h3>Security</h3><p>The load balancer receives public HTTP requests. ECS tasks accept web traffic only from the ALB security group; IAM enables ECR pulls.</p><span class="card-link">Explore security ↗</span></button>
+<button class="feature-card card-peach" data-detail="deployment" type="button"><span class="feature-icon">▱</span><h3>Deployment workflow</h3><p>Versioned images in ECR and Terraform-managed infrastructure make upgrades repeatable. ECS maintains the configured task count.</p><span class="card-link">Explore workflow ↗</span></button>
+</div>
+</section>
+<section aria-labelledby="arch-heading" class="architecture shell" id="architecture">
+<div class="architecture-panel">
+<div class="arch-top"><div><p class="section-kicker light-kicker">SOLUTION OVERVIEW</p><h2 id="arch-heading">◇ Project Architecture</h2><p>From a local Docker build to a website published through AWS ECS Fargate.</p></div><button class="btn btn-glass" data-open-dialog="architecture-dialog" type="button">How the pieces connect ↗</button></div>
+<div aria-label="Docker builds the image, Amazon ECR stores it, Terraform provisions AWS infrastructure, ECS Fargate runs the Apache container, and a load balancer serves the website" class="arch-flow" role="list"><div class="arch-node arch-docker" role="listitem"><div class="arch-symbol">🐳</div><strong>Docker</strong><small>Package the website</small></div><span aria-hidden="true" class="flow-arrow">➜</span><div class="arch-node arch-ecr" role="listitem"><div class="arch-symbol">▣</div><strong>Amazon ECR</strong><small>Store versioned images</small></div><span aria-hidden="true" class="flow-arrow">➜</span><div class="arch-node arch-tf" role="listitem"><div class="arch-symbol">◇</div><strong>Terraform</strong><small>Provision AWS resources</small></div><span aria-hidden="true" class="flow-arrow">➜</span><div class="arch-node arch-ecs" role="listitem"><div class="arch-symbol">⬡</div><strong>ECS Fargate</strong><small>Run Apache container</small></div><span aria-hidden="true" class="flow-arrow">➜</span><div class="arch-node arch-alb" role="listitem"><div class="arch-symbol">⇄</div><strong>Load Balancer</strong><small>Route HTTP requests</small></div><span aria-hidden="true" class="flow-arrow">➜</span><div class="arch-node arch-web" role="listitem"><div class="arch-symbol">▣</div><strong>Website</strong><small>Serve the Morays page</small></div></div>
+<div class="arch-pills"><span>🐳 Docker</span><span>▣ Amazon ECR</span><span>◇ Terraform</span><span>⬡ ECS Fargate</span><span>⇄ Application Load Balancer</span><span>🪶 Apache HTTPD</span></div>
+</div>
+</section>
+<section aria-labelledby="workflow-heading" class="section workflow shell" id="workflow">
+<p class="section-kicker">HOW IT WORKS</p><h2 id="workflow-heading">Built for reproducibility</h2><p class="section-text">A repeatable process, starting in Ubuntu WSL and ending with a live AWS website.</p>
+<div class="steps-grid">
+<article class="step-card"><span class="step-number">01</span><h3>Build the container image</h3><p>Package the complete HTML, CSS and JavaScript website into an Apache Docker image.</p><code>docker.exe build</code></article>
+<article class="step-card"><span class="step-number">02</span><h3>Push a versioned ECR image</h3><p>Authenticate Docker with Amazon ECR, add an immutable release tag and upload the image.</p><code>docker.exe push</code></article>
+<article class="step-card"><span class="step-number">03</span><h3>Deploy the infrastructure</h3><p>Review Terraform plans and deploy the networking, load balancer, IAM role and ECS Fargate service.</p><code>terraform apply</code></article>
+<article class="step-card"><span class="step-number">04</span><h3>Verify the running website</h3><p>Open the load balancer URL, check /healthz and inspect ECS service and target health.</p><code>curl /healthz</code></article>
+</div>
+</section>
+<section class="shell ending" id="about"><div><p class="section-kicker">LEARNING BY BUILDING</p><h2>From a local Docker image to a live website on AWS.</h2><p>Explore container packaging, immutable image releases, Terraform infrastructure and ECS Fargate deployments through one practical portfolio project.</p></div><button class="btn btn-purple" data-open-dialog="status-dialog" type="button">Check website response →</button></section>
+</main>
+<footer class="footer shell"><div><strong>Morays</strong> · Cloud DevOps Upgrade</div><p>Built using Docker, Amazon ECR, Terraform, ECS Fargate &amp; Apache.</p></footer>
+<dialog aria-labelledby="status-heading" class="site-dialog" id="status-dialog"><div class="dialog-head"><span class="dialog-icon">◉</span><button aria-label="Close dialog" class="dialog-close" data-close-dialog="" type="button">×</button></div><h2 id="status-heading">Website response check</h2><p>This checks whether the website currently serving this page responds successfully on /healthz. It is not a direct check of every ECS task or AWS service.</p><div class="status-box"><span class="status-indicator" id="status-light"></span><div><strong id="status-label">Not checked yet</strong><small id="status-detail">Select the button below to request /healthz</small></div></div><button class="btn btn-purple btn-block" id="run-health-check" type="button">Run website check</button></dialog>
+<dialog aria-labelledby="arch-dialog-heading" class="site-dialog" id="architecture-dialog"><div class="dialog-head"><span class="dialog-icon">◇</span><button aria-label="Close dialog" class="dialog-close" data-close-dialog="" type="button">×</button></div><h2 id="arch-dialog-heading">How the pieces connect</h2><p>Docker builds an Apache image containing the Morays HTML, CSS and JavaScript. The image is uploaded to Amazon ECR with a unique tag, so ECS can pull the exact release selected for deployment.</p><p>Terraform provisions networking, security groups, the public Application Load Balancer, ECS task definition and ECS Fargate service. Incoming HTTP requests go through the load balancer to a running Apache container.</p><p>The load balancer routes browser requests to the healthy instances. Newly launched replacement servers must also receive the configuration through a separate automated bootstrap process.</p><p>This demonstration may start with one task. For higher availability, configure two or more tasks across Availability Zones, use private task subnets, HTTPS and appropriate monitoring.</p></dialog>
+<dialog aria-labelledby="detail-heading" class="site-dialog" id="detail-dialog"><div class="dialog-head"><span class="dialog-icon" id="detail-icon">◇</span><button aria-label="Close dialog" class="dialog-close" data-close-dialog="" type="button">×</button></div><h2 id="detail-heading">Component details</h2><p id="detail-content"></p></dialog>
+</body>
+</html>
